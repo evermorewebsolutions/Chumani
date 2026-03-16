@@ -16,6 +16,25 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### `artifacts/chumani-landscapes` — Chumani's Landscapes and Irrigation Website
+
+Premium, responsive single-page marketing website for Chumani's Landscapes and Irrigation (Pty) Ltd, Cape Town.
+
+**Stack:** React + Vite, Tailwind CSS v4, Framer Motion, React Hook Form + Zod validation, Lucide React icons, Google Fonts (Playfair Display + Inter)
+
+**Sections:** Sticky Navbar, Hero (fullscreen), About, Services (8 cards), Portfolio Gallery, Why Choose Us, CTA, Contact (form + WhatsApp + map), Footer
+
+**Key Features:**
+- Glassmorphism navbar that transforms on scroll
+- Framer Motion scroll-triggered animations
+- Nature-inspired color palette (forest greens, earth tones, cream)
+- Fully responsive (mobile-first)
+- Contact form with validation (frontend only, toast on submit)
+- WhatsApp direct link (`wa.me/27736275220`)
+- Contact: sayochumani@gmail.com | 073 627 5220
+
 ## Structure
 
 ```text

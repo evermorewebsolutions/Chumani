@@ -1,0 +1,12 @@
+packages:
+  "framer-motion": "Used for premium scroll-triggered animations and fluid micro-interactions"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "For Zod validation integration with the contact form"
+
+images:
+  - path: "artifacts/chumani-landscapes/public/images/logo-mark.png"
+    description: "Minimalist elegant geometric leaf logo mark in deep forest green on a transparent background. Premium and professional."
+    aspect_ratio: "1:1"
+
+notes:
+  - The application is entirely frontend-driven. The contact form simulates a submission network request using a timeout and displays a success toast.

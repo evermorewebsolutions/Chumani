@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Chumani's Landscapes and Irrigation"
+version = "1.0.0"
+id = "artifacts/chumani-landscapes"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 25072
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/chumani-landscapes run dev"
+
+[services.env]
+PORT = "25072"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/chumani-landscapes", "run", "build"]
+publicDir = "artifacts/chumani-landscapes/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
