@@ -8,7 +8,8 @@ import {
   Droplets, 
   Wrench, 
   Scissors, 
-  ClipboardList 
+  ClipboardList,
+  Leaf
 } from "lucide-react";
 
 const services = [
@@ -55,13 +56,23 @@ const services = [
 ];
 
 export function Services() {
+  const marqueeText = "Garden Design · Irrigation · Hard Landscaping · Soft Landscaping · Maintenance · Consultation · ";
+  
   return (
-    <section id="services" className="py-24 bg-card relative">
-      {/* Subtle background texture/pattern could go here */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
-      
+    <section id="services" className="py-24 bg-gradient-to-br from-[hsl(40,20%,97%)] to-[hsl(150,10%,95%)] relative overflow-hidden">
+      {/* Marquee Strip */}
+      <div className="w-full overflow-hidden mb-20 opacity-20 pointer-events-none flex">
+        <motion.div 
+          className="whitespace-nowrap text-2xl sm:text-3xl font-display uppercase tracking-widest text-primary flex-shrink-0"
+          animate={{ x: [0, -1000] }}
+          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        >
+          {marqueeText.repeat(5)}
+        </motion.div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-20 relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -69,15 +80,15 @@ export function Services() {
             variants={fadeInUp}
           >
             <h2 className="text-sm font-bold tracking-widest uppercase text-accent mb-3">What We Do</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">Our Services</h3>
-            <p className="text-lg text-muted-foreground">
+            <h3 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-6">Our Services</h3>
+            <p className="text-lg text-muted-foreground font-light text-balance">
               Comprehensive landscaping solutions designed to elevate your outdoor living experience from concept to completion.
             </p>
           </motion.div>
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -87,25 +98,34 @@ export function Services() {
             <motion.div
               key={index}
               variants={fadeInUp}
-              className="bg-background rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-nature hover:border-accent/30 transition-all duration-300 group cursor-default relative overflow-hidden"
+              className="bg-white rounded-3xl p-8 shadow-sm border border-border/40 card-premium group cursor-default relative overflow-hidden z-10"
             >
-              {/* Hover gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Number watermark */}
+              <div className="absolute top-4 right-4 text-7xl font-display font-bold text-foreground/5 pointer-events-none select-none transition-transform duration-500 group-hover:scale-110 group-hover:text-primary/5">
+                {String(index + 1).padStart(2, '0')}
+              </div>
               
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 text-primary flex items-center justify-center mb-8 group-hover:shadow-[0_0_20px_rgba(20,163,81,0.3)] group-hover:scale-105 transition-all duration-500">
                   {service.icon}
                 </div>
                 <h4 className="text-xl font-bold text-foreground mb-3 font-display">
                   {service.title}
                 </h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">
                   {service.description}
                 </p>
               </div>
             </motion.div>
           ))}
         </motion.div>
+        
+        {/* Elegant Divider */}
+        <div className="mt-24 flex items-center justify-center max-w-2xl mx-auto">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
+          <Leaf className="w-5 h-5 mx-4 text-accent/50" />
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
+        </div>
       </div>
     </section>
   );
