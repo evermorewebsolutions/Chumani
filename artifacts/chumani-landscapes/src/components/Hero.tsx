@@ -35,8 +35,11 @@ export function Hero() {
         {/* Background Image with Parallax */}
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1416879598555-337ccf54714f?q=85&w=2000&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1416879598555-337ccf54714f?q=80&w=1920&auto=format&fit=crop"
             alt="Luxury landscaped garden"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>

@@ -19,8 +19,10 @@ export function CTA() {
       {/* Parallax Background */}
       <motion.div style={{ y, height: "140%" }} className="absolute -top-[20%] inset-x-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=80&w=2000&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=75&w=1600&auto=format&fit=crop"
           alt="Lush landscape"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-primary/80 mix-blend-multiply"></div>

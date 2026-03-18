@@ -144,7 +144,9 @@ export function Portfolio() {
                 >
                   <img 
                     src={project.image} 
-                    alt={project.title} 
+                    alt={project.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
                   />
                   {/* Full Overlay */}

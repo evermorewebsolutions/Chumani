@@ -218,8 +218,10 @@ export function Contact() {
             {/* Map Placeholder */}
             <div className="rounded-3xl overflow-hidden h-[300px] shadow-2xl border border-white/10 relative bg-black flex items-center justify-center group cursor-pointer">
               <img 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop" 
-                alt="Map of Cape Town" 
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=70&w=700&auto=format&fit=crop" 
+                alt="Map of Cape Town"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-60 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>

@@ -124,8 +124,10 @@ export function About() {
           >
             <div className="relative rounded-t-full rounded-b-3xl overflow-hidden shadow-nature-xl aspect-[3/4] w-[85%] mx-auto lg:mr-auto lg:ml-0 border-8 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000&auto=format&fit=crop" 
-                alt="Beautiful landscaped garden" 
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=75&w=900&auto=format&fit=crop" 
+                alt="Beautiful landscaped garden"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-[2s] hover:scale-110"
               />
             </div>
@@ -139,8 +141,10 @@ export function About() {
               className="absolute -bottom-10 right-0 w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-nature-lg border-4 border-white z-20"
             >
                <img 
-                src="https://images.unsplash.com/photo-1558904541-efa843a96f0f?q=80&w=800&auto=format&fit=crop" 
-                alt="Garden detail" 
+                src="https://images.unsplash.com/photo-1558904541-efa843a96f0f?q=75&w=700&auto=format&fit=crop" 
+                alt="Garden detail"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </motion.div>
