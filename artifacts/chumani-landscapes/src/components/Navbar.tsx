@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 
 const navLinks = [
@@ -55,19 +55,13 @@ export function Navbar() {
               className="flex items-center gap-3 cursor-pointer group"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              <div className="bg-primary text-primary-foreground p-2 rounded-xl shadow-lg transition-all duration-300">
-                <motion.div whileHover={{ rotate: 10 }}>
-                  <Leaf className="w-6 h-6" />
-                </motion.div>
-              </div>
-              <div className={`flex flex-col ${isScrolled ? "text-foreground" : "text-white"} transition-colors duration-300`}>
-                <span className="font-display font-bold text-2xl leading-none tracking-wide">
-                  Chumani's
-                </span>
-                <span className="text-[11px] uppercase tracking-[0.2em] opacity-80 font-medium mt-0.5">
-                  Landscapes
-                </span>
-              </div>
+              <motion.img
+                src="/logo.png"
+                alt="Chumani's Landscapes and Irrigation"
+                className="h-14 w-auto object-contain drop-shadow-lg transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              />
             </div>
 
             {/* Desktop Nav */}
