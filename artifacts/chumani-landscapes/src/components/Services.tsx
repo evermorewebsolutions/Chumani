@@ -16,7 +16,7 @@ const services = [
   {
     icon: <PenTool className="w-8 h-8" />,
     title: "Garden Design",
-    description: "Custom landscape architecture tailored to your space, aesthetic, and local climate."
+    description: "Custom landscape design tailored to your space, aesthetic, and local climate."
   },
   {
     icon: <Shovel className="w-8 h-8" />,

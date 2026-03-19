@@ -1,40 +1,88 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
-import { ArrowRight } from "lucide-react";
+import { fadeInUp } from "@/lib/animations";
+import { ArrowRight, Play } from "lucide-react";
 
 const categories = ["All", "Garden Design", "Irrigation", "Maintenance", "Hard Landscaping"];
 
 const allProjects = [
   {
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop",
-    title: "Modern Minimalist Courtyard",
+    src: "/images/project4.jpg",
+    type: "image",
+    title: "Completed Garden Pathway",
     category: "Hard Landscaping"
   },
   {
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f0f?q=80&w=800&auto=format&fit=crop",
-    title: "Coastal Estate Gardens",
+    src: "/images/project6.jpg",
+    type: "image",
+    title: "Espalier Wall Planting",
     category: "Garden Design"
   },
   {
-    image: "https://images.unsplash.com/photo-1584622781867-1c3905cd19a6?q=80&w=800&auto=format&fit=crop",
-    title: "Stepped Garden Pathway",
-    category: "Garden Design"
-  },
-  {
-    image: "https://images.unsplash.com/photo-1598902108854-10e335adac99?q=80&w=800&auto=format&fit=crop",
-    title: "Suburban Oasis Retreat",
+    src: "/images/project8.jpg",
+    type: "image",
+    title: "Lawn Fertilization",
     category: "Maintenance"
   },
   {
-    image: "https://images.unsplash.com/photo-1550136513-548af4445338?q=80&w=800&auto=format&fit=crop",
-    title: "Drought-Resistant Native",
+    src: "/images/project5.jpg",
+    type: "image",
+    title: "Garden Walkway Finished",
+    category: "Hard Landscaping"
+  },
+  {
+    src: "/images/project7.jpg",
+    type: "image",
+    title: "Lawn Treatment & Care",
+    category: "Maintenance"
+  },
+  {
+    src: "/videos/video1.mp4",
+    type: "video",
+    title: "Garden Transformation",
     category: "Garden Design"
   },
   {
-    image: "https://images.unsplash.com/photo-1592424001831-7b70bc10f09a?q=80&w=800&auto=format&fit=crop",
-    title: "Pristine Estate Lawns",
+    src: "/images/project2.jpg",
+    type: "image",
+    title: "Pathway Slab Installation",
+    category: "Hard Landscaping"
+  },
+  {
+    src: "/images/project3.jpg",
+    type: "image",
+    title: "Pathway Progress",
+    category: "Hard Landscaping"
+  },
+  {
+    src: "/videos/video2.mp4",
+    type: "video",
+    title: "Irrigation System Install",
     category: "Irrigation"
+  },
+  {
+    src: "/images/project1.jpg",
+    type: "image",
+    title: "Irrigation Trench Preparation",
+    category: "Irrigation"
+  },
+  {
+    src: "/images/project9.jpg",
+    type: "image",
+    title: "Chumani's Team",
+    category: "Garden Design"
+  },
+  {
+    src: "/images/project10.jpg",
+    type: "image",
+    title: "Hedge Maintenance",
+    category: "Maintenance"
+  },
+  {
+    src: "/videos/video3.mp4",
+    type: "video",
+    title: "Landscaping in Action",
+    category: "Maintenance"
   }
 ];
 
@@ -45,7 +93,7 @@ export function Portfolio() {
     (project) => activeCategory === "All" || project.category === activeCategory
   );
 
-  const marqueeText = "6 Featured Projects · Cape Town · Est. 2014 · ";
+  const marqueeText = "13 Featured Projects · Cape Town · Est. 2014 · ";
 
   return (
     <section id="portfolio" className="py-32 bg-white relative section-clip-diagonal -mt-10 z-20">
@@ -115,10 +163,6 @@ export function Portfolio() {
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => {
-              // Determine layout classes based on original index layout rules
-              // Row 1: 0 is large, 1 is normal
-              // Row 2: 2 is normal, 3 is large
-              // Row 3: 4 and 5 are normal
               let layoutClass = "";
               let heightClass = "h-[400px]";
               
@@ -129,12 +173,18 @@ export function Portfolio() {
                 } else if (index === 3) {
                   layoutClass = "md:col-span-2";
                   heightClass = "h-[500px]";
+                } else if (index === 6) {
+                  layoutClass = "md:col-span-2";
+                  heightClass = "h-[500px]";
+                } else if (index === 9) {
+                  layoutClass = "md:col-span-2";
+                  heightClass = "h-[500px]";
                 }
               }
 
               return (
                 <motion.div 
-                  key={project.title}
+                  key={project.src}
                   layout
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -142,13 +192,30 @@ export function Portfolio() {
                   transition={{ duration: 0.5 }}
                   className={`group relative rounded-3xl overflow-hidden cursor-pointer shadow-nature ${layoutClass} ${heightClass}`}
                 >
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
-                  />
+                  {project.type === "video" ? (
+                    <>
+                      <video
+                        src={project.src}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
+                      />
+                      <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2 text-white">
+                        <Play className="w-4 h-4 fill-white" />
+                      </div>
+                    </>
+                  ) : (
+                    <img 
+                      src={project.src} 
+                      alt={project.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
+                    />
+                  )}
+
                   {/* Full Overlay */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                     
