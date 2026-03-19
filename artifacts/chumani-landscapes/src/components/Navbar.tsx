@@ -58,7 +58,7 @@ export function Navbar() {
               <motion.img
                 src="/logo.png"
                 alt="Chumani's Landscapes and Irrigation"
-                className="h-20 w-auto object-contain drop-shadow-lg transition-all duration-300"
+                className="h-24 w-auto object-contain drop-shadow-lg transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               />

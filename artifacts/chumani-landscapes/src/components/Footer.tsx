@@ -100,6 +100,9 @@ export function Footer() {
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
+        <div className="mt-4 text-center text-white/25 text-xs tracking-wide">
+          Made with ❤️ in South Africa by Evermore Digital Solutions
+        </div>
       </div>
     </footer>
   );
