@@ -97,7 +97,7 @@ export function Hero() {
               variants={fadeInUp}
               className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed text-balance font-light"
             >
-              Professional landscape design, irrigation systems, and pristine garden maintenance tailored for the unique climate of Cape Town.
+              Chumani's Landscaping &amp; Irrigation provides professional landscaping, garden design, and irrigation installation services in Cape Town — quality garden services you can trust.
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
