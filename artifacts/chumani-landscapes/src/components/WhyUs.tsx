@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { fadeInUp, slideInLeft, slideInRight, staggerContainer } from "@/lib/animations";
 import { Award, LeafyGreen, ShieldCheck, Sprout } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import whyUsGarden from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_(3)_1793269884283.jpeg";
 
 const features = [
   {
@@ -134,8 +135,8 @@ export function WhyUs() {
       <div className="w-full lg:w-[40%] h-[50vh] lg:h-auto relative overflow-hidden hidden lg:block">
         <motion.div style={{ y, height: "120%" }} className="absolute -top-[10%] inset-x-0">
           <img 
-            src="https://images.unsplash.com/photo-1416879598555-337ccf54714f?q=75&w=900&auto=format&fit=crop" 
-            alt="Detail of lush plant leaves"
+            src={whyUsGarden}
+            alt="Finished garden with a healthy lawn, clipped hedges and paved walkway"
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover"

@@ -1,0 +1,1 @@
+- [Dependency firewall in workspace installs](dependency-firewall.md) — update vulnerable dependency parents or scope installs to the artifact being verified; never bypass the firewall.

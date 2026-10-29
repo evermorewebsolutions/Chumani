@@ -1,7 +1,7 @@
 import { Variants } from "framer-motion";
 
-const premiumEasing = [0.22, 1, 0.36, 1];
-const slowEasing = [0.16, 1, 0.3, 1];
+const premiumEasing: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const slowEasing: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
