@@ -19,7 +19,7 @@ export function CTA() {
       {/* Parallax Background */}
       <motion.div style={{ y, height: "140%" }} className="absolute -top-[20%] inset-x-0 z-0">
         <img
-          src="/images/hero-bg.jpg"
+          src="/media/images/legacy/hero-bg.webp"
           alt="Beautiful garden setting"
           loading="lazy"
           decoding="async"

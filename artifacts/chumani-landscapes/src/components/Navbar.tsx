@@ -56,7 +56,7 @@ export function Navbar() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <motion.img
-                src="/logo.png"
+                src="/media/brand/logo.webp"
                 alt="Chumani's Landscapes and Irrigation"
                 className="h-24 w-auto object-contain drop-shadow-lg transition-all duration-300"
                 whileHover={{ scale: 1.05 }}

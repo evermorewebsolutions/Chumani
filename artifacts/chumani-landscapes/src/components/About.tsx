@@ -124,7 +124,7 @@ export function About() {
           >
             <div className="relative rounded-t-full rounded-b-3xl overflow-hidden shadow-nature-xl aspect-[3/4] w-[85%] mx-auto lg:mr-auto lg:ml-0 border-8 border-white">
               <img 
-                src="/images/about1.jpg" 
+                src="/media/images/legacy/about1.webp" 
                 alt="Professional lawn mowing service"
                 loading="lazy"
                 decoding="async"
@@ -141,7 +141,7 @@ export function About() {
               className="absolute -bottom-10 right-0 w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-nature-lg border-4 border-white z-20"
             >
                <img 
-                src="/images/about2.jpg" 
+                src="/media/images/legacy/about2.webp" 
                 alt="Lush garden borders"
                 loading="lazy"
                 decoding="async"

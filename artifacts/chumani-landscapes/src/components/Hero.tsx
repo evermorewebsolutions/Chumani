@@ -35,7 +35,7 @@ export function Hero() {
         {/* Background Image with Parallax */}
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <img
-            src="/images/hero-bg.jpg"
+            src="/media/images/legacy/hero-bg.webp"
             alt="Luxury landscaped garden"
             fetchPriority="high"
             loading="eager"

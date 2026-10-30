@@ -3,27 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { fadeInUp } from "@/lib/animations";
 
-import entranceProgress from "@assets/WhatsApp_Image_2026-10-19_at_20.06.38_(1)_1793269884259.jpeg";
-import roadsidePrep from "@assets/WhatsApp_Image_2026-10-19_at_20.06.38_1793269884261.jpeg";
-import pavingTeam from "@assets/WhatsApp_Image_2026-10-19_at_20.06.39_1793269884265.jpeg";
-import gravelGarden from "@assets/WhatsApp_Image_2026-10-19_at_20.06.40_(1)_1793269884267.jpeg";
-import gardenPathProgress from "@assets/WhatsApp_Image_2026-10-19_at_20.06.40_1793269884269.jpeg";
-import finishedEntrance from "@assets/WhatsApp_Image_2026-10-19_at_20.06.41_(1)_1793269884271.jpeg";
-import entranceSideView from "@assets/WhatsApp_Image_2026-10-19_at_20.06.41_1793269884273.jpeg";
-import lawnBedPrep from "@assets/WhatsApp_Image_2026-10-19_at_20.11.21_1793269884275.jpeg";
-import hedgeWork from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_(1)_1793269884278.jpeg";
-import gardenStepsProgress from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_(2)_1793269884281.jpeg";
-import finishedLawn from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_(3)_1793269884283.jpeg";
-import irrigationValves from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_(4)_1793269884285.jpeg";
-import irrigationController from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_(5)_1793269884287.jpeg";
-import brickSteps from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_(6)_1793269884289.jpeg";
-import gardenMaintenance from "@assets/WhatsApp_Image_2026-10-19_at_20.11.22_1793269884290.jpeg";
-
-import entranceVideo from "@assets/WhatsApp_Video_2026-10-19_at_20.06.42_1793269884292.mp4";
-import landscapingVideo from "@assets/WhatsApp_Video_2026-10-19_at_20.06.48_1793269884294.mp4";
-import teamVideo from "@assets/WhatsApp_Video_2026-10-19_at_20.06.54_1793269884296.mp4";
-import irrigationVideo from "@assets/WhatsApp_Video_2026-10-19_at_20.11.29_1793269884298.mp4";
-
 type Project = {
   src: string;
   type: "image" | "video";
@@ -35,82 +14,82 @@ type Project = {
 const categories = ["All Work", "Garden Design", "Irrigation", "Maintenance", "Hard Landscaping"];
 
 const recentProjects: Project[] = [
-  { src: finishedEntrance, type: "image", title: "A Welcoming Garden Entrance", category: "Hard Landscaping" },
-  { src: entranceSideView, type: "image", title: "Gravel Garden & Feature Planting", category: "Garden Design" },
-  { src: finishedLawn, type: "image", title: "Freshly Defined Lawn & Hedges", category: "Garden Design" },
-  { src: gravelGarden, type: "image", title: "A Garden Path Taking Shape", category: "Hard Landscaping" },
-  { src: entranceProgress, type: "image", title: "Building a Paved Entrance", category: "Hard Landscaping" },
-  { src: gardenPathProgress, type: "image", title: "Pathway & Garden Installation", category: "Hard Landscaping" },
-  { src: roadsidePrep, type: "image", title: "Street-Side Garden Preparation", category: "Garden Design" },
-  { src: gardenStepsProgress, type: "image", title: "Brick Steps & Patio in Progress", category: "Hard Landscaping" },
-  { src: brickSteps, type: "image", title: "Creating a Practical Garden Stairway", category: "Hard Landscaping" },
-  { src: lawnBedPrep, type: "image", title: "Preparing a Garden Bed", category: "Maintenance" },
-  { src: hedgeWork, type: "image", title: "Careful Hedge & Lawn Maintenance", category: "Maintenance" },
-  { src: gardenMaintenance, type: "image", title: "Shaping a Fresh Lawn", category: "Maintenance" },
-  { src: irrigationValves, type: "image", title: "Irrigation Valve Installation", category: "Irrigation" },
-  { src: irrigationController, type: "image", title: "Smart Irrigation Controls", category: "Irrigation" },
-  { src: pavingTeam, type: "image", title: "Craftsmanship on Site", category: "Hard Landscaping" },
+  { src: "/media/images/work/finished-entrance.webp", type: "image", title: "A Welcoming Garden Entrance", category: "Hard Landscaping" },
+  { src: "/media/images/work/entrance-side-view.webp", type: "image", title: "Gravel Garden & Feature Planting", category: "Garden Design" },
+  { src: "/media/images/work/finished-lawn.webp", type: "image", title: "Freshly Defined Lawn & Hedges", category: "Garden Design" },
+  { src: "/media/images/work/gravel-garden.webp", type: "image", title: "A Garden Path Taking Shape", category: "Hard Landscaping" },
+  { src: "/media/images/work/entrance-progress.webp", type: "image", title: "Building a Paved Entrance", category: "Hard Landscaping" },
+  { src: "/media/images/work/garden-path-progress.webp", type: "image", title: "Pathway & Garden Installation", category: "Hard Landscaping" },
+  { src: "/media/images/work/roadside-prep.webp", type: "image", title: "Street-Side Garden Preparation", category: "Garden Design" },
+  { src: "/media/images/work/garden-steps-progress.webp", type: "image", title: "Brick Steps & Patio in Progress", category: "Hard Landscaping" },
+  { src: "/media/images/work/brick-steps.webp", type: "image", title: "Creating a Practical Garden Stairway", category: "Hard Landscaping" },
+  { src: "/media/images/work/lawn-bed-prep.webp", type: "image", title: "Preparing a Garden Bed", category: "Maintenance" },
+  { src: "/media/images/work/hedge-work.webp", type: "image", title: "Careful Hedge & Lawn Maintenance", category: "Maintenance" },
+  { src: "/media/images/work/garden-maintenance.webp", type: "image", title: "Shaping a Fresh Lawn", category: "Maintenance" },
+  { src: "/media/images/work/irrigation-valves.webp", type: "image", title: "Irrigation Valve Installation", category: "Irrigation" },
+  { src: "/media/images/work/irrigation-controller.webp", type: "image", title: "Smart Irrigation Controls", category: "Irrigation" },
+  { src: "/media/images/work/paving-team.webp", type: "image", title: "Craftsmanship on Site", category: "Hard Landscaping" },
   {
-    src: entranceVideo,
+    src: "/media/videos/entrance.mp4",
     type: "video",
     title: "Garden Entrance — Project Video",
     category: "Hard Landscaping",
-    poster: finishedEntrance,
+    poster: "/media/images/work/finished-entrance.webp",
   },
   {
-    src: landscapingVideo,
+    src: "/media/videos/landscaping.mp4",
     type: "video",
     title: "Landscape Installation — Project Video",
     category: "Garden Design",
-    poster: gravelGarden,
+    poster: "/media/images/work/gravel-garden.webp",
   },
   {
-    src: teamVideo,
+    src: "/media/videos/team.mp4",
     type: "video",
     title: "Our Team at Work",
     category: "Maintenance",
-    poster: hedgeWork,
+    poster: "/media/images/work/hedge-work.webp",
   },
   {
-    src: irrigationVideo,
+    src: "/media/videos/irrigation.mp4",
     type: "video",
     title: "Irrigation — Project Video",
     category: "Irrigation",
-    poster: irrigationValves,
+    poster: "/media/images/work/irrigation-valves.webp",
   },
 ];
 
 const existingProjects: Project[] = [
-  { src: "/images/project4.jpg", type: "image", title: "Completed Garden Pathway", category: "Hard Landscaping" },
-  { src: "/images/project6.jpg", type: "image", title: "Espalier Wall Planting", category: "Garden Design" },
-  { src: "/images/project8.jpg", type: "image", title: "Lawn Fertilization", category: "Maintenance" },
-  { src: "/images/project5.jpg", type: "image", title: "Garden Walkway Finished", category: "Hard Landscaping" },
-  { src: "/images/project7.jpg", type: "image", title: "Lawn Treatment & Care", category: "Maintenance" },
+  { src: "/media/images/legacy/project4.webp", type: "image", title: "Completed Garden Pathway", category: "Hard Landscaping" },
+  { src: "/media/images/legacy/project6.webp", type: "image", title: "Espalier Wall Planting", category: "Garden Design" },
+  { src: "/media/images/legacy/project8.webp", type: "image", title: "Lawn Fertilization", category: "Maintenance" },
+  { src: "/media/images/legacy/project5.webp", type: "image", title: "Garden Walkway Finished", category: "Hard Landscaping" },
+  { src: "/media/images/legacy/project7.webp", type: "image", title: "Lawn Treatment & Care", category: "Maintenance" },
   {
-    src: "/videos/video1.mp4",
+    src: "/media/videos/project1.mp4",
     type: "video",
     title: "Garden Transformation",
     category: "Garden Design",
-    poster: "/images/project4.jpg",
+    poster: "/media/images/legacy/project4.webp",
   },
-  { src: "/images/project2.jpg", type: "image", title: "Pathway Slab Installation", category: "Hard Landscaping" },
-  { src: "/images/project3.jpg", type: "image", title: "Pathway Progress", category: "Hard Landscaping" },
+  { src: "/media/images/legacy/project2.webp", type: "image", title: "Pathway Slab Installation", category: "Hard Landscaping" },
+  { src: "/media/images/legacy/project3.webp", type: "image", title: "Pathway Progress", category: "Hard Landscaping" },
   {
-    src: "/videos/video2.mp4",
+    src: "/media/videos/project2.mp4",
     type: "video",
     title: "Irrigation System Install",
     category: "Irrigation",
-    poster: "/images/project1.jpg",
+    poster: "/media/images/legacy/project1.webp",
   },
-  { src: "/images/project1.jpg", type: "image", title: "Irrigation Trench Preparation", category: "Irrigation" },
-  { src: "/images/project9.jpg", type: "image", title: "Chumani's Team", category: "Garden Design" },
-  { src: "/images/project10.jpg", type: "image", title: "Hedge Maintenance", category: "Maintenance" },
+  { src: "/media/images/legacy/project1.webp", type: "image", title: "Irrigation Trench Preparation", category: "Irrigation" },
+  { src: "/media/images/legacy/project9.webp", type: "image", title: "Chumani's Team", category: "Garden Design" },
+  { src: "/media/images/legacy/project10.webp", type: "image", title: "Hedge Maintenance", category: "Maintenance" },
   {
-    src: "/videos/video3.mp4",
+    src: "/media/videos/project3.mp4",
     type: "video",
     title: "Landscaping in Action",
     category: "Maintenance",
-    poster: "/images/project10.jpg",
+    poster: "/media/images/legacy/project10.webp",
   },
 ];
 
@@ -233,7 +212,7 @@ export function Portfolio() {
                     <img
                       src={project.src}
                       alt={project.title}
-                      loading={index < 4 ? "eager" : "lazy"}
+                      loading="lazy"
                       decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                     />
